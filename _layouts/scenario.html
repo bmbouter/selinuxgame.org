@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<div class="page">
+  <h1 class="page-title">{{ page.title }}</h1>
+
+  <p class="message">
+    Be sure that you've followed the <a href="{{ site.baseurl }}{% link getting_started.md %}">getting started guide</a>.
+    You can sanity check that you are ready by running `vagrant status`.
+  </p>
+
+  <p>
+    To run this scenario run:
+  </p>
+
+  {% highlight shell %}
+    vagrant up {{ page.slug }}  # Wait for Vagrant up to finish
+    vagrant ssh {{ page.slug }}
+  {% endhighlight %}
+
+  <p>
+    When you believe you know the answer, tell it with one of the SELinux Game
+    Admins on Freenode:
+  </p>
+
+  <ul>
+    <li>bmbouter</li>
+    <li>dkliban</li>
+  </ul>
+
+  You may be able to connect to freenode using: <a href="https://webchat.freenode.net/">webchat.freenode.net</a>
+</div>
