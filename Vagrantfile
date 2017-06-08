@@ -11,11 +11,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   scenarios = [{% for scenario in site.scenarios %}'{{ scenario.slug }}', {% endfor %}]
 
   scenarios.each do |scenario|
+      config.vm.synced_folder ".", "/vagrant", disabled: true
       # Create the "selinuxgame" box
       config.vm.define scenario do |selinuxgame|
         selinuxgame.vm.box = "selinuxgame/" + scenario
         selinuxgame.vm.host_name = "selinuxgame.example.com"
-        selinuxgame.vm.synced_folder ".", "/vagrant", disabled: true
 
         selinuxgame.vm.provider :libvirt do |domain, override|
             domain.cpus = 1
