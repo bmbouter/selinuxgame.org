@@ -6,8 +6,9 @@ layout: default
   <h1 class="page-title">{{ page.title }}</h1>
 
   <p class="message">
-    Be sure that you've followed the <a href="{{ site.baseurl }}{% link getting_started.md %}">getting started guide</a>.
-    You can sanity check that you are ready by running `vagrant status`.
+    You can sanity check that you are ready for this scenario if you see
+    '{{ page.slug }}' listed in the output of `vagrant status`.
+    If you don't, see the <a href="{{ site.baseurl }}{% link getting_started.md %}">getting started guide</a>.
   </p>
 
   <p>
@@ -15,8 +16,8 @@ layout: default
   </p>
 
   {% highlight shell %}
-    vagrant up {{ page.slug }}  # Wait for Vagrant up to finish
-    vagrant ssh {{ page.slug }}
+vagrant up {{ page.slug }}  # Wait for Vagrant up to finish
+vagrant ssh {{ page.slug }}
   {% endhighlight %}
 
   <p>
