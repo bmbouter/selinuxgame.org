@@ -2,7 +2,6 @@
 layout: page
 title: Getting Started
 ---
-
 Getting started has two parts:
 
 1. [Install Vagrant](https://www.vagrantup.com/downloads.html). To quote the
@@ -33,3 +32,10 @@ Getting started has two parts:
    ```
 
 4. Play a [Scenario]({{ site.baseurl }}{% link scenarios.md %}).
+
+
+<p class="message">
+  If you expect to see a scenario in your environment, but you do not, your
+  vagrant file is likely out of date. You can replace your local Vagrantfile
+  with the one from step 2 safely at any time.
+</p>

@@ -2,8 +2,8 @@
 layout: page
 title: Contributing
 ---
-SELinux is volunteer run and benefits from several types of contributions from
-the community.
+SELinux is volunteer run and values several types of contributions from the
+community.
 
 ## Become an Admin
 
@@ -20,3 +20,10 @@ contributing guide soon.
 
 The SELinux game is intended to allow more people to understand SELinux, which
 helps make many environment more secure.
+
+## Contact an Admin to get Involved
+
+Contact via Freenode IRC network with one of the following admins:
+
+* bmbouter
+* dkliban
