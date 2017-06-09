@@ -3,7 +3,13 @@ layout: page
 title: Contributing
 ---
 SELinux is volunteer run and values several types of contributions from the
-community.
+community. Interested in contributing? Contact one of the following admins via
+the Freenode IRC network to get involved:
+
+* bmbouter
+* dkliban
+
+Here are some of the ways you can contribute:
 
 ## Become an Admin
 
@@ -16,14 +22,7 @@ The scenarios primarily come out of everyday experiences with SELinux. We are
 looking for new scenarios to be contributed. We are hoping to write a scenario
 contributing guide soon.
 
-## Tell Others
+## Promote It
 
 The SELinux game is intended to allow more people to understand SELinux, which
 helps make many environment more secure.
-
-## Contact an Admin to get Involved
-
-Contact via Freenode IRC network with one of the following admins:
-
-* bmbouter
-* dkliban
