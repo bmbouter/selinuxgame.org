@@ -35,7 +35,7 @@ Getting started has two parts:
 
 
 <p class="message">
-  If you expect to see a scenario in your environment, but you do not, your
-  vagrant file is likely out of date. You can replace your local Vagrantfile
+  If you expect to see a scenario in your environment but don't, your
+  Vagrantfile is likely out of date. You can replace your local Vagrantfile
   with the one from step 2 safely at any time.
 </p>
