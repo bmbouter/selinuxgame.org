@@ -21,20 +21,18 @@ Getting started has two parts:
    [user@localhost vagrant_test]$ vagrant status
    Current machine states:
 
-{% for scenario in site.scenarios %}
-   {{ scenario.slug }}
-{% endfor %}
+   broken_antivirus          not created (libvirt)
+   fresh_pulp                not created (libvirt)
+   new_ways                  not created (libvirt)
+   stayin_alive              not created (libvirt)
 
    This environment represents multiple VMs. The VMs are all listed
-   above with their current state. For more information about a specific VM, run `vagrant status NAME`.
-
+   above with their current state. For more information about a
+   specific VM, run `vagrant status NAME`.
    ```
 
 4. Play a [Scenario]({{ site.baseurl }}{% link scenarios.md %}).
 
-
-<p class="message">
-  If your `vagrant status` does not show all of the above scenarios, your
-  Vagrantfile is out of date. You can update your local Vagrantfile with wget
-  as done in step 2 safely at any time.
-</p>
+If your `vagrant status` does not offer a scenario listed here, your
+Vagrantfile is out of date. Update your Vagrantfile as done in step 2, which
+can be done safely at any time.
