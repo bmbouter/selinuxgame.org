@@ -14,17 +14,16 @@ Getting started has two parts:
    wget {{ site.baseurl }}{% link Vagrantfile %}
    ```
 
-3. From the same Directory as `Vagrantfile`, run `vagrant up` which should
-   display output like the following:
+3. From the same Directory as `Vagrantfile`, run `vagrant status` which should
+   display output listing the scenarios similar to:
 
    ```
    [user@localhost vagrant_test]$ vagrant status
    Current machine states:
 
-   broken_antivirus          not created (libvirt)
-   fresh_pulp                not created (libvirt)
-   new_ways                  not created (libvirt)
-   stayin_alive              not created (libvirt)
+{% for scenario in site.scenarios %}
+   {{ scenario.slug }}
+{% endfor %}
 
    This environment represents multiple VMs. The VMs are all listed
    above with their current state. For more information about a specific VM, run `vagrant status NAME`.
@@ -35,7 +34,7 @@ Getting started has two parts:
 
 
 <p class="message">
-  If you expect to see a scenario in your environment but don't, your
-  Vagrantfile is likely out of date. You can replace your local Vagrantfile
-  with the one from step 2 safely at any time.
+  If your `vagrant status` does not show all of the above scenarios, your
+  Vagrantfile is out of date. You can update your local Vagrantfile with wget
+  as done in step 2 safely at any time.
 </p>
