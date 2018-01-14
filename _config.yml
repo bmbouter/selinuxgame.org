@@ -36,3 +36,5 @@ defaults:
 
 # Custom vars
 version:             1.1.0a1
+
+# box-add-urls: http://example.com/

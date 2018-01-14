@@ -1,0 +1,48 @@
+<p style="padding-top:30px">
+  <h2>Try it!</h2>
+
+{% if page.collection == "tutorials" %}
+{% assign box_name = 'tutorial' %}
+{% else %}
+{% assign box_name = page.slug %}
+{% endif %}
+
+{% if site.box-add-urls %}
+Load the Vagrant box using either virtualbox or libvirt:
+{% highlight bash %}
+# For virtualbox
+vagrant box add --provider virtualbox {{ box_name }} {{ site.box-add-urls }}{{ box_name }}_virtualbox.box
+vagrant up {{ box_name }}
+vagrant ssh {{ box_name }}
+
+
+
+# For libvirt
+vagrant box add --provider libvirt {{ box_name }} {{ site.box-add-urls }}{{ box_name }}_libvirt.box
+vagrant up {{ box_name }}
+vagrant ssh {{ box_name }}
+{% endhighlight %}
+
+{% else %}
+Explore these commands using the tutorials vagrant box. Start the environment
+using
+{% highlight bash %}
+vagrant up {{ box_name }}
+vagrant ssh {{ box_name }}
+{% endhighlight %}
+If you don't have the command, visit the
+  <a href="{{ site.baseurl }}{% link getting_started.md %}">getting started guide</a>
+</p>
+The "vagrant up" command downloads a Vagrant box. This can can take a few
+minutes. Vagrant boxes can be pre-downloaded using the "vagrant box" command.
+For example pre-download this scenario box using:
+
+{% highlight shell %}
+# For virtualbox
+vagrant box add --provider virtualbox {{ box_name }} selinuxgame/{{ box_name }}
+
+# For libvirt
+vagrant box add --provider libvirt {{ box_name }} selinuxgame/{{ box_name }}
+{% endhighlight %}
+
+{% endif %}

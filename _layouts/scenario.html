@@ -5,29 +5,16 @@ layout: default
 <div class="page">
   <h1 class="page-title">{{ page.title }}</h1>
 
-  <p class="message">
-    You can sanity check that you are ready for this scenario if you see
-    '{{ page.slug }}' listed in the output of `vagrant status`.
-    If you don't, see the <a href="{{ site.baseurl }}{% link getting_started.md %}">getting started guide</a>.
+  <h3 style="padding-top:10px">Difficulty: {{ page.difficulty }}</h3>
+
+  <p style="padding-top:10px">
+    <h3>Description:</h3>
+    {{ page.description }}
   </p>
 
-  <p>
-    To run this scenario run:
-  </p>
+{% include try-it.html %}
 
-  {% highlight shell %}
-vagrant up {{ page.slug }}  # Wait for Vagrant up to finish
-vagrant ssh {{ page.slug }}
-  {% endhighlight %}
-
-  The `vagrant up` command downloads a Vagrant box. This can can take a few
-  minutes. Vagrant boxes can be pre-downloaded using the `vagrant box`
-  command. For example pre-download this scenario box using:
-
-  {% highlight shell %}
-vagrant box add selinuxgame/{{ page.slug }}
-  {% endhighlight %}
-
+  <h2 style="padding-top:30px">Submit your Answer</h2>
   <p>
     When you believe you know the answer, tell it to one of the
     <a href="{{ site.baseurl }}{% link admins.md %}"> SELinux Game Admins</a>

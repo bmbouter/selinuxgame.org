@@ -7,11 +7,8 @@ All of the tutorials below are designed to teach SELinux commands used in the
 scenarios. These are self-guided and provide concrete examples. They build on
 each other, so going top to bottom is recommended.
 
-Each of these can be tested with the `tutorials` box. Load it with:
-
-```
-vagrant up tutorials
-```
+Each of these can be tested with the `tutorials` box. More instructions on
+loading this box are on the tutorial pages.
 
 <table>
   <thead>
