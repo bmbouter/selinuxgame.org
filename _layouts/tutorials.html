@@ -21,7 +21,7 @@ layout: default
     <p style="padding-top:10px">
       <ul>
       {% for tutorial_name in page.next_tutorials %}
-        {% assign next_tutorial =  site.tutorials | where:"slug",tutorial_name | first %}
+        {% assign next_tutorial = site.tutorials | where:"slug",tutorial_name | first %}
         <li><a href="{{ site.baseurl }}{{ next_tutorial.url}}">{{ next_tutorial.title }}</a>: {{ next_tutorial.description }}</li>
       {% endfor %}
       </ul>

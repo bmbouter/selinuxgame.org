@@ -1,4 +1,5 @@
 ---
+number: 3
 title: Changing a File Context
 description: Learn how to change a file context
 attribution_url: https://selinuxproject.org/page/Guide/Contexts

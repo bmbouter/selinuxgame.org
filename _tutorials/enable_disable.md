@@ -1,4 +1,5 @@
 ---
+number: 1
 title: Enable/Disable/Status
 description: Learn how enable, disable, and check the status of SELinux
 attribution_url: https://selinuxproject.org/page/NewUsers
