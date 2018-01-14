@@ -1,4 +1,5 @@
 ---
+number: 4
 title: SELinux rules
 description: Learn the basics of how SELinux determines if an action is allowed or not.
 attribution_url: https://selinuxproject.org/page/BasicConcepts

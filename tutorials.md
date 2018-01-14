@@ -4,10 +4,14 @@ title: Tutorials
 ---
 
 All of the tutorials below are designed to teach SELinux commands used in the
-scenarios. These are self-guided and provide the solution with the exercise.
+scenarios. These are self-guided and provide concrete examples. They build on
+each other, so going top to bottom is recommended.
 
-Each of these can be tested with the `tutorials` box. Load it with
-`vagrant up tutorials`.
+Each of these can be tested with the `tutorials` box. Load it with:
+
+```
+vagrant up tutorials
+```
 
 <table>
   <thead>
@@ -17,7 +21,8 @@ Each of these can be tested with the `tutorials` box. Load it with
     </tr>
   </thead>
   <tbody>
-{% for tutorial in site.tutorials %}
+{% assign sorted_tutorials = site.tutorials | sort: 'number' %}
+{% for tutorial in sorted_tutorials %}
     <tr>
       <td><a href="{{ site.baseurl }}{{ tutorial.url }}">{{ tutorial.title }}</a></td>
       <td>{{ tutorial.description }}</td>

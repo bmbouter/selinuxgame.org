@@ -1,4 +1,5 @@
 ---
+number: 2
 title: File and Process Contexts
 description: Learn how SELinux labels files and processes
 attribution_url: https://selinuxproject.org/page/BasicConcepts
