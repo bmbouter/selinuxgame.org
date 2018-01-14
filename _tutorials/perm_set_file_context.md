@@ -2,6 +2,7 @@
 title: Permanently Set a File Context
 description: Learn how to set file context by modifying the policy.
 attribution_url: https://selinuxproject.org/page/FileLabelRecipe
+next_tutorials: ['audit2allow']
 ---
 
 The `chcon` program can change the context of a file; however, changes made
@@ -30,7 +31,9 @@ apply the changes added via `semanage fcontext`:
 system_u:object_r:myfile_t /path/to/myfile
 ```
 
-## Tools
+<p style="padding-top:30px">
+  <h2>Tools</h2>
+</p>
 
 * [`semanage`](https://linux.die.net/man/8/semanage) allows for policy
 management. Specifically the `semanage fcontext` can alter the default file

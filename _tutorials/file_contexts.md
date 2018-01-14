@@ -2,6 +2,7 @@
 title: File and Process Contexts
 description: Learn how SELinux labels files and processes
 attribution_url: https://selinuxproject.org/page/BasicConcepts
+next_tutorials: ['rules', 'temp_set_file_context']
 ---
 
 Every process and object in the system has a context (also known as a label).
@@ -22,7 +23,9 @@ and will be discussed later. The following is an example context:
 In this context, the user is system_u, the role is system_r, and the type is
 xserver_t. The following is an example context, with the MLS field:
 
-## Tools
+<p style="padding-top:30px">
+  <h2>Tools</h2>
+</p>
 
 * The [`ps`](https://linux.die.net/man/1/ps) command, when used with the `-Z`
 option will show process contexts.
