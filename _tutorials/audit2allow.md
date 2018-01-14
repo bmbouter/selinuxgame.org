@@ -39,7 +39,9 @@ satisfied, run the `semodule -i local.pp` command to install the module. You
 can mail an SELinux list, such as the Fedora SELinux list or the NSA SELinux
 mailing list, to ask for review of your module before you install it. 
 
-## Tools
+<p style="padding-top:30px">
+  <h2>Tools</h2>
+</p>
 
 * [`audit2allow`](https://linux.die.net/man/1/audit2allow) Generate a SELinux
 policy from logs of denied operations.

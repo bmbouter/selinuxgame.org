@@ -6,16 +6,34 @@ layout: default
 
 {{ page.content }}
 
-<h2 class="page-title">Try it!</h2>
-Explore these commands using the tutorials vagrant box. Start the environment
-using {% highlight bash %}vagrant up tutorial{% endhighlight %} If you don't
-have the command, visit the
-<a href="{{ site.baseurl }}{% link getting_started.md %}">getting started guide</a>
+<p style="padding-top:30px">
+  <h2>Try it!</h2>
+  Explore these commands using the tutorials vagrant box. Start the environment
+  using {% highlight bash %}vagrant up tutorial{% endhighlight %} If you don't
+  have the command, visit the
+  <a href="{{ site.baseurl }}{% link getting_started.md %}">getting started guide</a>
+</p>
+
+{% if page.next_tutorials %}
+  <p style="padding-top:30px">
+    <h2>More Tutorials</h2>
+    After this one, the following tutorials are recommended:
+    <p style="padding-top:10px">
+      <ul>
+      {% for tutorial_name in page.next_tutorials %}
+        {% assign next_tutorial =  site.tutorials | where:"slug",tutorial_name | first %}
+        <li><a href="{{ site.baseurl }}{{ next_tutorial.url}}">{{ next_tutorial.title }}</a>: {{ next_tutorial.description }}</li>
+      {% endfor %}
+      </ul>
+    </p>
+  </p>
+{% endif %}
 
 {% if page.attribution_url %}
-  <p style="padding-top:50px">
+  <p style="padding-top:30px">
     <span style="font-size:0.8em">
-      Portions of this page's content are copied from <a href="{{ page.attribution_url }}">this page</a>.
+      Portions of this page's content are copied from <a href="{{ page.attribution_url }}">this page</a>
+      for non-commercial, education purposes.
     </span>
   </p>
 {% endif %}
