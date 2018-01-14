@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<h1 class="page-title">{{ page.title }}</h1>
+
+{{ page.content }}
+
+<h2 class="page-title">Try it!</h2>
+Explore these commands using the tutorials vagrant box. Start the environment
+using {% highlight bash %}vagrant up tutorial{% endhighlight %} If you don't
+have the command, visit the
+<a href="{{ site.baseurl }}{% link getting_started.md %}">getting started guide</a>
+
+{% if page.attribution_url %}
+  <p style="padding-top:50px">
+    <span style="font-size:0.8em">
+      Portions of this page's content are copied from <a href="{{ page.attribution_url }}">this page</a>.
+    </span>
+  </p>
+{% endif %}

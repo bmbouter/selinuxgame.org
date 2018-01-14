@@ -7,7 +7,6 @@ tagline:             'Learn SELinux By Doing'
 description:         'Solve SELinux puzzles to learn and demonstrate your SELinux skillz'
 url:                 http://selinuxgame.org
 baseurl:             'http://selinuxgame.org'
-paginate:            1
 
 # About/contact
 author:
@@ -19,6 +18,8 @@ author:
 collections:
   scenarios:
     output: true
+  tutorials:
+    output: true
 
 # Defaults
 defaults:
@@ -27,6 +28,11 @@ defaults:
       type: scenarios
     values:
       layout: scenario
+  - scope:
+      path: ""
+      type: tutorials
+    values:
+      layout: tutorials
 
 # Custom vars
-version:             1.0.0
+version:             1.1.0a1
