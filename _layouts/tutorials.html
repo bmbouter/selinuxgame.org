@@ -6,13 +6,7 @@ layout: default
 
 {{ page.content }}
 
-<p style="padding-top:30px">
-  <h2>Try it!</h2>
-  Explore these commands using the tutorials vagrant box. Start the environment
-  using {% highlight bash %}vagrant up tutorial{% endhighlight %} If you don't
-  have the command, visit the
-  <a href="{{ site.baseurl }}{% link getting_started.md %}">getting started guide</a>
-</p>
+{% include try-it.html %}
 
 {% if page.next_tutorials %}
   <p style="padding-top:30px">
